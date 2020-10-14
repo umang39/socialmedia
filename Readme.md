@@ -1,15 +1,12 @@
-
-### Project src<pre>
+### Project src
+<pre>
+src
 ├───Controllers
 ├───Db
 ├───Public
-│   ├───components
-│   ├───css
-│   └───js
-├───Route
-└───Utils</pre>
+└───Route
+</pre>
+### how start project<pre>
 
-### how start project
-<pre>
 $ npm i
 $ node server.js</pre>
