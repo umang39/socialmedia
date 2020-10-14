@@ -3,10 +3,10 @@ let route = require('express').Router()
 let {
     getUserById,
     getUserByName,
-    usernameCreator
-} = require('../Controllers')
+    userProducer
+} = require('../Controllers/name')
 
-let userRoute = route.get('/:id',async(req,res)=>{
+route.get('/:id',async(req,res)=>{
     let u;
     if((isNaN(req.params.id))){
         u = getUserByName(req.params.id)
@@ -26,8 +26,10 @@ let userRoute = route.get('/:id',async(req,res)=>{
 })
 
 route.post('/', async (req, res) => {
-    const u = await usernameCreator()
+    const u = await userProducer()
     res.status(201).send(u)
   })
   
-module.exports = {route}
+module.exports = {
+    userRoute : route
+}

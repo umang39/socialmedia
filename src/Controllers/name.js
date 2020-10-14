@@ -3,20 +3,20 @@
     let {user} = require('../Db/db')
     // const db = require('../Db/db')
 // db.sync()
-    function userProducer(){
+   async function userProducer(){
         
-        let users = user.create({
+        let users =await user.create({
             username : usernameCreator()
         })
         return users
     }
-    function getUserById(id){
-        return user.finOne({
+    async function getUserById(id){
+        return await user.finOne({
             where : {id}
         })
     }
-  function getUserByName(name){
-    return user.finOne({
+  async function getUserByName(name){
+    return await user.finOne({
         where : {name}
         })
     }
@@ -24,7 +24,7 @@
 module.exports = {
     getUserById,
     getUserByName,
-    usernameCreator
+    userProducer
 }
 
 //    console.log(userProducer())

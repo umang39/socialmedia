@@ -1,0 +1,26 @@
+{
+  "name": "social_media",
+  "version": "1.0.0",
+  "description": "src\r ├───Controllers\r ├───Db\r ├───Public\r └───Route",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umang39/socialmedia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umang39/socialmedia/issues"
+  },
+  "homepage": "https://github.com/umang39/socialmedia#readme"
+}

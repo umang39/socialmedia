@@ -4,11 +4,11 @@ let express = require('express')
 let {userRoute} = require('./Route/userRoute')
 let {postRoute} = require('./Route/postRoute')
 let app = express()
-
+app.use('/public',express.static(__dirname + '/Public'))
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
-app.use('api/users',userRoute)
-app.use('api/posts',postRoute)
+app.use('/api/users',userRoute)
+app.use('/api/posts',postRoute)
 db.sync()
 .then(()=>{
     app.listen(3333,()=>{

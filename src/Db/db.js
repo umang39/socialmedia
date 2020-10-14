@@ -12,7 +12,9 @@ let id_generator = {
 
 }
 let user = db.define('user',{
-  username : sequelize.DataTypes.STRING,
+  username :{
+        type : sequelize.DataTypes.STRING,
+  } ,
   id : id_generator
 });
 
@@ -48,7 +50,7 @@ Comment.belongsTo(user)
 post.hasMany(Comment)
 Comment.belongsTo(post)
 
-db.sync()
+// db.sync()
 
 module.exports = {
     user,post,Comment,db
