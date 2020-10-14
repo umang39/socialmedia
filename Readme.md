@@ -1,10 +1,13 @@
 <pre>
 ### Project src
-src
 ├───Controllers
 ├───Db
 ├───Public
-└───Route
+│   ├───components
+│   ├───css
+│   └───js
+├───Route
+└───Utils
 
 ### how start project
 
